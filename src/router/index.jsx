@@ -1,24 +1,27 @@
-
 import {
   createBrowserRouter,
   RouterProvider,
   Route,
-  Link,
 } from "react-router-dom";
+import { Template } from "../atomic/template/temlates";
+import { SanPham } from "../atomic/page/sanPham";
+import { GioHang } from "../atomic/page/giohang";
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: (
-      <div>
-        <h1>Ho World</h1>
-        <Link to="about">About Us</Link>
-      </div>
-    ),
-  },
-  {
-    path: "about",
-    element: <div>About</div>,
+    element: <Template />,
+    children: [
+      {
+        path: "/",
+        element: <SanPham />,
+      },
+      {
+        path: "/giohang",
+        element: <GioHang />,
+      },
+    ],
   },
 ]);
 
+<RouterProvider router={router} />;
