@@ -5,7 +5,7 @@ import {
 } from "react-router-dom";
 import { Template } from "../atomic/template/temlates";
 import { SanPham } from "../atomic/page/sanPham";
-import { GioHang } from "../atomic/page/giohang";
+import GioHang from "../atomic/page/giohang";
 
 export const router = createBrowserRouter([
   {

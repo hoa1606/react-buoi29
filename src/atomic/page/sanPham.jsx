@@ -5,7 +5,7 @@ import { Title } from "../atoms/title";
 
 export function SanPham() {
   return (
-    <>
+    <div className="mx-56">
       <div className="flex gap-8">
         <div>
           <img
@@ -35,6 +35,6 @@ export function SanPham() {
           <BtAdd />
         </div>
       </div>
-    </>
+    </div>
   );
 }
